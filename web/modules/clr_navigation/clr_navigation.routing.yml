@@ -1,0 +1,26 @@
+scope.definition:
+  path: '/scope/definition'
+  defaults:
+    _controller: 'Drupal\clr_navigation\Controller\Conceptualisation::view_concept_matrix'
+  requirements:
+    _permission: 'access content'
+
+conceptualisation:
+  path: '/conceptualisation'
+  requirements:
+    _permission: 'access content'
+
+literature.search:
+  path: 'literature/search'
+  requirements:
+    _permission: 'access content'
+
+literature.analysis_and_synthesis:
+  path: 'analysis_and_synthesis'
+  requirements:
+    _permission: 'access content'
+
+literature.research.agenda:
+  path: 'research/agenda'
+  requirements:
+    _permisssion: 'access content'

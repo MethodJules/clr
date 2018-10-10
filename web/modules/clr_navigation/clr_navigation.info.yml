@@ -1,0 +1,5 @@
+name: CLR Navigation
+description: Provides the Navigation vor the CLR
+type: module
+core: 8.x
+package: Collaborative Literaturereview

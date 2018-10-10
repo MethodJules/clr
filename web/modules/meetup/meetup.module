@@ -1,0 +1,100 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: julien
+ * Date: 12.07.18
+ * Time: 19:40
+ */
+
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+function meetup_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+
+    //Check if entity type = event
+    if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'scope')) {
+        return;
+    }
+
+    //Get base path of the site
+    $base_path = base_path();
+    //Get the nid of the actual node
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if($node instanceof \Drupal\node\NodeInterface) {
+        $nid = $node->id();
+        $title = $node->title->value;
+
+
+        //Check if user alread has assigned to the event
+        $event_id = $nid;
+        $uid = \Drupal::currentUser()->id();
+
+
+
+        $connection = \Drupal::database();
+        $query = $connection->query("SELECT event_id, user_id, is_interested, is_participating FROM {meetup} WHERE event_id = :event_id AND user_id = :user_id;",
+            [':event_id' =>$event_id,
+                ':user_id' => $uid,
+
+            ]);
+        $result = $query->fetchAll();
+        //kint($result);
+
+        if ($result == NULL) {
+            //Create link for interested
+            $link_interested = '<a href="' . $base_path . 'meetup/interested/' . $nid . '"> Ich bin interessiert. </a>';
+            $link_participation = '<a href="' . $base_path . 'meetup/participating/' . $nid . '"> Ich nehme teil. </a>';
+        } else {
+            foreach ($result as $row) {
+                //kint($row->is_interested);
+                //kint($row->is_participating);
+                if ($row->is_interested == 'y') {
+                    $link_interested = '<a href="' . $base_path . 'meetup/interested/' . $nid . '"> Ich bin nicht interessiert. </a>';
+                    //kint($row);
+                } else {
+                    $link_interested = '<a href="' . $base_path . 'meetup/interested/' . $nid . '"> Ich bin interessiert. </a>';
+                    drupal_set_message($row->is_interested);
+                }
+
+                if (strcmp($row->is_particpating, 'y')) {
+                    $link_participation = '<a href="' . $base_path . 'meetup/not_participating/' . $nid . '"> Ich nehme nicht teil. </a>';
+
+                } else {
+                    $link_participation = '<a href="' . $base_path . 'meetup/participating/' . $nid . '"> Ich nehme teil. </a>';
+                    drupal_set_message($row->is_participating);
+                }
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+    // Display the current number of pages the user has viewed along with the
+    // node's content.
+    /*
+    $build['view_count'] = [
+        '#markup' => '<p>' . t('You have viewed this node times this session. And the NodeID is @nid', array('@nid' => $nid)) . '</p>',
+        // In order for this example to work we disable caching for the content of
+        // this node completely. This ensures that our hook is called every time the
+        // node is viewed instead of using a cached version of the page for
+        // subsequent requests.
+        '#cache' => [
+            'max-age' => 0,
+        ],
+    ];
+    */
+
+
+    $build['meetup_links'] = [
+        '#prefix' => '<div id="meetup_link">',
+        '#suffix' => '</div>',
+        '#markup' => '<ul><li>' . $link_interested . '</li><li>' .  $link_participation.'</li></ul>',
+        '#weight' => 1000,
+    ];
+}

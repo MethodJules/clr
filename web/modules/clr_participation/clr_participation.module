@@ -1,0 +1,51 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: julien
+ * Date: 07.09.18
+ * Time: 22:49
+ */
+
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+function clr_participation_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode)
+{
+    //Check if entity type = scope
+    if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'scope')) {
+        return;
+    }
+
+    //Get base path of the site
+    $base_path = base_path();
+    //Get the nid of the actual node
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if($node instanceof \Drupal\node\NodeInterface) {
+        $nid = $node->id();
+
+        //Todo check if the current user has already assinged to a scope
+
+
+
+        //Create Links
+        $link_interested = '<a href="' . $base_path . 'scope/interested/' . $nid . '"> Ich bin interessiert. </a>';
+        $link_participation = '<a href="' . $base_path . 'scope/participating/' . $nid . '"> Ich nehme teil. </a>';
+
+    }
+
+    $build['clr_participation_overview'] = [
+        '#prefix' => '<div id="clr_participation_overview">',
+        '#suffix' => '</div>',
+        '#markup' => '<p>32 are already interested</p><p>21 are already participating</p>',
+        '#weight' => 999,
+    ];
+
+    $build['clr_participation_links'] = [
+        '#prefix' => '<div id="meetup_link">',
+        '#suffix' => '</div>',
+        '#markup' => '<ul><li>' . $link_interested . '</li><li>' .  $link_participation.'</li></ul>',
+        '#weight' => 1000,
+    ];
+
+
+};

@@ -1,0 +1,60 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: julien
+ * Date: 12.07.18
+ * Time: 21:57
+ */
+
+/**
+ * Implements hook_schema()
+ */
+
+function meetup_schema() {
+    // |MeetupID|EventID|EventName|User|Datum|
+    $schema['meetup'] = array(
+        'description' => 'Stores the data for the meetup module',
+        'fields' => array(
+            'meetup_id' => array(
+                'type' => 'serial',
+                'not null' => TRUE,
+                'description' => 'Primary Key for Events from the meetup module.',
+            ),
+
+            'event_id' => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'description' => 'Event ID of the event. Equals the node entity id',
+            ),
+
+            'event_name' => array(
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'description' => 'Event name of the event.',
+            ),
+
+            'user_id' => array(
+                'type' => 'int',
+                'not null' => TRUE,
+                'description' => 'User Id that participates or is interested',
+            ),
+
+            'is_interested' => array(
+                'type' => 'varchar',
+                'length' => 1,
+                'description' => 'Flag if user is interested in the event',
+            ),
+
+            'is_participating' => array(
+                'type' => 'varchar',
+                'length' => 1,
+                'description' => 'Flag if user is participating',
+            ),
+
+        ),
+        'primary key' => array('meetup_id'),
+    );
+
+    return $schema;
+}

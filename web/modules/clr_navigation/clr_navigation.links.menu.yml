@@ -1,0 +1,30 @@
+clr_navigation.main.scope.definition:
+  title: 'Scope Definition'
+  description: 'Goes to the Scope Definition'
+  parent: main
+  menu_name: main
+  route_name: scope.definition
+clr_navigation.main.conceptualisation:
+  title: 'Conceptualisation'
+  description: 'Goes to the Conceptualisation'
+  parent: main
+  menu_name: main
+  route_name: conceptualisation
+clr_navigation.main.literature.search:
+  title: 'Literature Search'
+  description: 'Goes to the Search Section'
+  parent: main
+  menu_name: main
+  route_name: literature.search
+clr_navigation.main.literature.analysis_and_synthesis:
+  title: 'Literature Analysis and Synthesis'
+  description: 'Goes to the Search Section'
+  parent: main
+  menu_name: main
+  route_name: literature.analysis_and_synthesis
+clr_navigation.main.research.agenda:
+  title: 'Research Agenda'
+  description: 'Goes to the Research Agenda'
+  parent: main
+  menu_name: main
+  route_name: literature.research.agenda

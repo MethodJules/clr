@@ -1,0 +1,6 @@
+clr_participation.interested:
+  path: 'scope/interested/{nid}'
+  defaults:
+    _controller: 'Drupal\clr_participation\Controller\Clr_Participation_Controller:interested'
+  requirements:
+    _permission: 'access content'

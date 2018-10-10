@@ -1,0 +1,18 @@
+meetup.save:
+  path: '/meetup/{flag}/{event_id}'
+  defaults:
+    _controller: 'Drupal\meetup\Controller\MeetupController::meetup_save_to_db'
+    event_id: 0
+    flag: 'no_value'
+  requirements:
+    _permission: 'access content'
+
+meetup.admin_settings_form:
+  path: 'admin/config/meetup/adminsettings'
+  defaults:
+    _form: '\Drupal\meetup\Form\MeetupForm'
+    _title: 'MeetupForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

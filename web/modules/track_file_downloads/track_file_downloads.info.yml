@@ -1,0 +1,12 @@
+name: Track file downloads
+type: module
+description: Tracks private file downloads.
+# core: 8.x
+dependencies:
+  - file
+
+# Information added by Drupal.org packaging script on 2018-08-29
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'track_file_downloads'
+datestamp: 1535527093

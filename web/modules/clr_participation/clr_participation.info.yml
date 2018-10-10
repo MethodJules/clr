@@ -1,0 +1,5 @@
+name: CLR Participation
+description: Provides interested and participation buttons
+type: module
+core: 8.x
+package: Collaborative Literaturereview
