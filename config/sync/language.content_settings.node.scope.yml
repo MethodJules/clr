@@ -1,0 +1,11 @@
+uuid: b3f92508-b6a8-46e9-bb15-3b4e0e63ed6c
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.scope
+id: node.scope
+target_entity_type_id: node
+target_bundle: scope
+default_langcode: site_default
+language_alterable: false

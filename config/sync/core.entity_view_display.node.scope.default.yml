@@ -1,0 +1,53 @@
+uuid: 4a5ed597-f302-49a4-9937-cec20828abb7
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.scope.body
+    - field.field.node.scope.field_scope_bewertung
+    - field.field.node.scope.field_scope_comment
+    - node.type.scope
+  module:
+    - comment
+    - text
+    - user
+    - votingapi_widgets
+id: node.scope.default
+targetEntityType: node
+bundle: scope
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_scope_bewertung:
+    weight: 103
+    label: above
+    settings:
+      readonly: false
+      style: default
+      show_results: false
+      values: {  }
+      show_own_vote: false
+    third_party_settings: {  }
+    type: voting_api_formatter
+    region: content
+  field_scope_comment:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

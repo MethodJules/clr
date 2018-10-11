@@ -1,0 +1,22 @@
+uuid: b2f518b7-3b64-4a13-849b-715f49911b79
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.scope
+id: node.scope.promote
+field_name: promote
+entity_type: node
+bundle: scope
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

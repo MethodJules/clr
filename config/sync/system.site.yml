@@ -1,0 +1,14 @@
+uuid: 574db002-ea06-4e95-b601-98b2b4dd6a84
+name: 'Kollaboratives Literaturreview'
+mail: hoferj@uni-hildesheim.de
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: de
+default_langcode: de
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

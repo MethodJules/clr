@@ -1,0 +1,22 @@
+uuid: 94ee3da4-817a-4556-9f46-0ac3dbf15e33
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.scope
+  module:
+    - text
+id: node.scope.body
+field_name: body
+entity_type: node
+bundle: scope
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

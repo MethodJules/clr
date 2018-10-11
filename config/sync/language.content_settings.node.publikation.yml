@@ -1,0 +1,11 @@
+uuid: ada08246-c1a8-4619-ac1e-c77f05fa9ee3
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.publikation
+id: node.publikation
+target_entity_type_id: node
+target_bundle: publikation
+default_langcode: site_default
+language_alterable: false

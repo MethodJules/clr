@@ -1,0 +1,18 @@
+uuid: 518a9249-2556-4525-89a4-763b45bd7b3b
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.scope
+id: node.scope.title
+field_name: title
+entity_type: node
+bundle: scope
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

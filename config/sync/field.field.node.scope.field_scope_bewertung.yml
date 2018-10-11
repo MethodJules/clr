@@ -1,0 +1,28 @@
+uuid: ddf61307-661e-4d3b-8dda-7e44d8e2c779
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scope_bewertung
+    - node.type.scope
+  module:
+    - votingapi_widgets
+id: node.scope.field_scope_bewertung
+field_name: field_scope_bewertung
+entity_type: node
+bundle: scope
+label: Bewertung
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+    value: 0
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field

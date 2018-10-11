@@ -1,0 +1,22 @@
+uuid: eee93332-2d18-421c-9f94-4085943d79f5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.publikation
+  module:
+    - text
+id: node.publikation.body
+field_name: body
+entity_type: node
+bundle: publikation
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

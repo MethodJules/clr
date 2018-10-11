@@ -1,0 +1,46 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  clr_navigation__main__conceptualisation:
+    weight: -48
+    menu_name: main
+    parent: ''
+    enabled: true
+    expanded: false
+  clr_navigation__main__literature__analysis_and_synthesis:
+    weight: -46
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  clr_navigation__main__literature__search:
+    weight: -47
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  clr_navigation__main__research__agenda:
+    weight: -45
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  clr_navigation__main__scope__definition:
+    weight: -49
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  standard__front_page:
+    weight: -50
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+langcode: de

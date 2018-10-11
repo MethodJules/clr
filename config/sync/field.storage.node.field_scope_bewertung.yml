@@ -1,0 +1,22 @@
+uuid: d7c0bdcc-0bcc-41d9-87dc-1690b3c0a73c
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - votingapi_widgets
+id: node.field_scope_bewertung
+field_name: field_scope_bewertung
+entity_type: node
+type: voting_api_field
+settings:
+  vote_type: vote
+  vote_plugin: fivestar
+  status: ''
+module: votingapi_widgets
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

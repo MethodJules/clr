@@ -1,0 +1,22 @@
+uuid: d94da5ae-1535-4981-a3e7-2ad74069b4ca
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.publikation
+id: node.publikation.promote
+field_name: promote
+entity_type: node
+bundle: publikation
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

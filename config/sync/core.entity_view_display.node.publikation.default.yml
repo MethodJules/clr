@@ -1,0 +1,37 @@
+uuid: be84e15e-0558-4553-b865-43c955bba750
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.publikation.body
+    - field.field.node.publikation.field_datei
+    - node.type.publikation
+  module:
+    - file
+    - text
+    - user
+id: node.publikation.default
+targetEntityType: node
+bundle: publikation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_datei:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
