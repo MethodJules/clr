@@ -36,8 +36,20 @@ definitions:
     expanded: false
     enabled: true
   standard__front_page:
-    weight: -50
+    enabled: false
     menu_name: main
+    parent: ''
+    expanded: false
+    weight: -50
+  user__page:
+    weight: -45
+    enabled: true
+    menu_name: account
+    parent: ''
+    expanded: false
+  user__logout:
+    weight: -44
+    menu_name: account
     parent: ''
     expanded: false
     enabled: true

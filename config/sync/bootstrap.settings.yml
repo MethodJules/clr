@@ -5,8 +5,21 @@ _core:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: ''
+  url: 'http://147.172.96.27/clr/web/themes/contrib/bootstrap/favicon.ico'
   use_default: true
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+table_responsive: '-1'
+table: ''
+navbar_inverse: 0
 features:
   comment_user_picture: true
   comment_user_verification: true

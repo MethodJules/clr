@@ -1,0 +1,52 @@
+uuid: bf9babad-a6ad-45ef-9c84-90fe1d6a0018
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.concept_map.field_concepts
+    - node.type.concept_map
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          494448aa-939a-4841-b536-c4f356db62ef:
+            uuid: 494448aa-939a-4841-b536-c4f356db62ef
+            region: content
+            configuration:
+              id: 'field_block:node:concept_map:field_concepts'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+id: node.concept_map.default
+targetEntityType: node
+bundle: concept_map
+mode: default
+content:
+  field_concepts:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

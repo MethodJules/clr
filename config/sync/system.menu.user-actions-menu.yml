@@ -1,0 +1,8 @@
+uuid: b207086f-1937-41d6-86a2-601c64a83a99
+langcode: de
+status: true
+dependencies: {  }
+id: user-actions-menu
+label: 'User actions menu'
+description: 'Links im Bezug auf das aktive Benutzerkonto'
+locked: false

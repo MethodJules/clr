@@ -7,9 +7,53 @@ dependencies:
     - field.field.node.publikation.field_datei
     - node.type.publikation
   module:
+    - field_layout
     - file
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          4c3ece93-0115-49e0-aa10-816696e2f2c1:
+            uuid: 4c3ece93-0115-49e0-aa10-816696e2f2c1
+            region: content
+            configuration:
+              id: 'field_block:node:publikation:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          1d27d82f-9104-4837-b08e-006a35bd70f4:
+            uuid: 1d27d82f-9104-4837-b08e-006a35bd70f4
+            region: content
+            configuration:
+              id: 'field_block:node:publikation:field_datei'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+                type: file_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
 id: node.publikation.default
 targetEntityType: node
 bundle: publikation
@@ -33,5 +77,7 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

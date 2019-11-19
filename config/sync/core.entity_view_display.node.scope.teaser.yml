@@ -5,10 +5,41 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.scope.body
+    - field.field.node.scope.field_scope_bewertung
+    - field.field.node.scope.field_scope_comment
     - node.type.scope
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          010b32aa-21c5-4bbc-9006-8bbb3570c89e:
+            uuid: 010b32aa-21c5-4bbc-9006-8bbb3570c89e
+            region: content
+            configuration:
+              id: 'field_block:node:scope:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: node.scope.teaser
 targetEntityType: node
 bundle: scope
@@ -25,5 +56,9 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_scope_bewertung: true
+  field_scope_comment: true
   langcode: true

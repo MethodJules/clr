@@ -1,0 +1,181 @@
+<?php
+
+/**
+ * @file
+ * Contains d3_concept_map.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function d3_concept_map_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the d3_concept_map module.
+    case 'help.page.d3_concept_map':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Visualize concepts maps using D3.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function d3_concept_map_entity_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+
+
+
+
+
+
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function d3_concept_map_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+
+    //$nid = $build["#node"]->values["nid"]["x-default"];
+    //$conceptMapService = \Drupal::service('d3_concept_map.default');
+    //$conceptMapService->getData(13);
+
+
+    $graphData = '{
+  "nodes": [
+    {
+      "name": "Concept Maps",
+      "label": "",
+      "id": 1
+    },
+    {
+      "name": "Mental structure of long term memory",
+      "label": "",
+      "id": 2
+    },
+    {
+      "name": "Relatedness structure",
+      "label": "",
+      "id": 3
+    },
+    {
+      "name": "Hierarchical structures",
+      "label": "",
+      "id": 4
+    },
+    {
+      "name": "Two-dimensional diagrams",
+      "label": "",
+      "id": 5
+    },
+    {
+      "name": "Concepts",
+      "label": "",
+      "id": 6
+    },
+    {
+      "name": "Named, directional links",
+      "label": "",
+      "id": 7
+    },
+    {
+      "name": "Propositions",
+      "label": "",
+      "id": 8
+    },
+    {
+      "name": "Classroom assessments",
+      "label": "",
+      "id": 9
+    },
+    {
+      "name": "Knowledge Structure of students",
+      "label": "",
+      "id": 10
+    },
+    {
+      "name": "How structure changes instruction",
+      "label": "",
+      "id": 11
+    }
+  ],
+  "links": [
+    {
+      "source": 1,
+      "target": 2,
+      "type": "probe",
+      "since": 2010
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "type": "which assumed to have"
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "type": "represented by"
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "type": "are"
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "type": "that contain"
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "type": "that contain"
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "type": "to make"
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "type": "to make"
+    },
+    {
+      "source": 1,
+      "target": 9,
+      "type": "can be used for"
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "type": "by revealing the"
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "type": "and"
+    },
+    {
+      "source": 11,
+      "target": 8,
+      "type": "especially"
+    }
+    
+  ]
+}';
+
+    //Add a JS library
+    $build['#attached']['library'][] = 'd3_concept_map/d3';
+    $build['#attached']['library'][] = 'd3_concept_map/d3sm';
+    $build['#attached']['drupalSettings']['d3_concept_map']['data'] = $graphData;
+    $build['#attached']['library'][] = 'd3_concept_map/concept-map-js';
+
+
+
+}

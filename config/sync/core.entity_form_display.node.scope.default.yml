@@ -9,9 +9,15 @@ dependencies:
     - node.type.scope
   module:
     - comment
+    - field_layout
+    - layout_discovery
     - path
     - text
     - votingapi_widgets
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.scope.default
 targetEntityType: node
 bundle: scope

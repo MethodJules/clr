@@ -1,0 +1,5 @@
+name: 'd3_concept_map'
+type: module
+description: 'Visualize concepts maps using D3.'
+core: 8.x
+package: 'Custom'

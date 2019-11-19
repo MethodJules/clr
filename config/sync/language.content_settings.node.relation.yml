@@ -1,0 +1,11 @@
+uuid: 0f26d98f-c03e-4b10-9d2b-f4026cec3e5d
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.relation
+id: node.relation
+target_entity_type_id: node
+target_bundle: relation
+default_langcode: site_default
+language_alterable: false

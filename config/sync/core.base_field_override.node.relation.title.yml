@@ -1,0 +1,18 @@
+uuid: c5973fd6-ccd8-4774-a13d-8c5fbb73e03c
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.relation
+id: node.relation.title
+field_name: title
+entity_type: node
+bundle: relation
+label: 'Description of the relation'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

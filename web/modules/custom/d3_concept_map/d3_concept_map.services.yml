@@ -1,0 +1,4 @@
+services:
+  d3_concept_map.default:
+    class: Drupal\d3_concept_map\ConceptMapService
+    arguments: []

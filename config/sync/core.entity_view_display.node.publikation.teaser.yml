@@ -5,10 +5,40 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.publikation.body
+    - field.field.node.publikation.field_datei
     - node.type.publikation
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          39b8234b-1aba-4479-ac43-03adbb363604:
+            uuid: 39b8234b-1aba-4479-ac43-03adbb363604
+            region: content
+            configuration:
+              id: 'field_block:node:publikation:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: node.publikation.teaser
 targetEntityType: node
 bundle: publikation
@@ -25,5 +55,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_datei: true
   langcode: true

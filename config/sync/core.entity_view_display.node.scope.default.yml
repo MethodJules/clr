@@ -10,9 +10,74 @@ dependencies:
     - node.type.scope
   module:
     - comment
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
     - votingapi_widgets
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          54e5eb5f-6965-4789-bac4-4331f9cc2a9a:
+            uuid: 54e5eb5f-6965-4789-bac4-4331f9cc2a9a
+            region: content
+            configuration:
+              id: 'field_block:node:scope:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          abf4f548-d46b-4800-a2c9-65eee0f00df1:
+            uuid: abf4f548-d46b-4800-a2c9-65eee0f00df1
+            region: content
+            configuration:
+              id: 'field_block:node:scope:field_scope_comment'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+                type: comment_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          7726d5ac-378b-447d-b8fa-19037790f663:
+            uuid: 7726d5ac-378b-447d-b8fa-19037790f663
+            region: content
+            configuration:
+              id: 'field_block:node:scope:field_scope_bewertung'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  readonly: false
+                  style: default
+                  show_results: false
+                  values: {  }
+                  show_own_vote: false
+                third_party_settings: {  }
+                type: voting_api_formatter
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
 id: node.scope.default
 targetEntityType: node
 bundle: scope
@@ -49,5 +114,7 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

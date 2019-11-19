@@ -1,0 +1,28 @@
+d3:
+  remote: 'https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.js'
+  version: 4.9.1
+  license:
+    name: BSD
+    url: 'https://en.wikipedia.org/wiki/BSD_licenses'
+    gpl-compatible: false
+  js:
+    /libraries/d3v4/d3.js: {  }
+d3sm:
+  remote: 'https://d3js.org/d3-selection-multi.v1.js'
+  version: 1.0.1
+  license:
+    name: BSD
+    url: 'https://en.wikipedia.org/wiki/BSD_licenses'
+    gpl-compatible: false
+  js:
+    /libraries/d3sm/d3-selection-multi.v1.js: {  }
+concept-map-js:
+  version: 1.x
+  js:
+    js/d3_concept_map.js: {}
+  css:
+    theme:
+      css/d3_concept_map.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

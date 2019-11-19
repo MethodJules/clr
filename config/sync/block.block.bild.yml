@@ -1,0 +1,39 @@
+uuid: 3cf2b43a-19d8-43b3-a397-efe9db84f294
+langcode: de
+status: false
+dependencies:
+  config:
+    - field.field.user.user.user_picture
+  module:
+    - layout_builder
+    - user
+  theme:
+    - bootstrap
+id: bild
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'field_block:user:user:user_picture'
+settings:
+  id: 'field_block:user:user:user_picture'
+  label: Bild
+  provider: layout_builder
+  label_display: '0'
+  formatter:
+    label: above
+    type: image
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+  context_mapping:
+    entity: '@user.current_user_context:current_user'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

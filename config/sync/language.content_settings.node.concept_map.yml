@@ -1,0 +1,11 @@
+uuid: d22de73c-0c90-489e-b4f2-80187867430f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.concept_map
+id: node.concept_map
+target_entity_type_id: node
+target_bundle: concept_map
+default_langcode: site_default
+language_alterable: false

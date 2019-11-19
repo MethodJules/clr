@@ -1,0 +1,11 @@
+uuid: 11333874-da5d-4f4a-ab1b-58cd9eeb814f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.concept
+id: node.concept
+target_entity_type_id: node
+target_bundle: concept
+default_langcode: site_default
+language_alterable: false

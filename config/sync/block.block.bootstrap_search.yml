@@ -1,16 +1,17 @@
 uuid: 805caa7b-520a-4dfc-b2b3-323f89c102c0
 langcode: de
-status: false
+status: true
 dependencies:
   module:
     - search
+    - system
   theme:
     - bootstrap
 _core:
   default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
 id: bootstrap_search
 theme: bootstrap
-region: sidebar_second
+region: sidebar_first
 weight: -6
 provider: null
 plugin: search_form_block
@@ -19,4 +20,9 @@ settings:
   label: Search
   provider: search
   label_display: visible
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: true
+    context_mapping: {  }

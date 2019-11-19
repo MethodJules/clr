@@ -1,0 +1,52 @@
+uuid: 5022583b-9ebe-4a3e-a4c7-9ea5e4bbd624
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.relation.field_concepts
+    - node.type.relation
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          cff375db-db23-418f-86f3-1909f794624e:
+            uuid: cff375db-db23-418f-86f3-1909f794624e
+            region: content
+            configuration:
+              id: 'field_block:node:relation:field_concepts'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+id: node.relation.default
+targetEntityType: node
+bundle: relation
+mode: default
+content:
+  field_concepts:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
