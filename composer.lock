@@ -804,6 +804,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -1566,7 +1567,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.12",
-                    "datestamp": "1532095085",
+                    "datestamp": "1543447542",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1592,10 +1593,6 @@
                     "name": "Fabiano Sant'Ana (wundo)",
                     "homepage": "https://www.drupal.org/u/wundo",
                     "role": "Co-maintainer"
-                },
-                {
-                    "name": "wundo",
-                    "homepage": "https://www.drupal.org/user/25523"
                 }
             ],
             "description": "Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.",
@@ -1613,7 +1610,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/charts.git",
-                "reference": "aeb5b0ee1219d13f1069e3eebfe2001ebac6e062"
+                "reference": "98526212ad687b1365f94fc388956d6939682552"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1624,8 +1621,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-beta3+9-dev",
-                    "datestamp": "1564583886",
+                    "version": "8.x-3.1+3-dev",
+                    "datestamp": "1574920384",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1667,7 +1664,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/charts"
             },
-            "time": "2019-08-02T18:42:21+00:00"
+            "time": "2019-11-28T05:55:22+00:00"
         },
         {
             "name": "drupal/console",
@@ -2187,7 +2184,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc1",
-                    "datestamp": "1527030784",
+                    "datestamp": "1568446684",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -2298,7 +2295,7 @@
             "description": "Rocket.Chat integration module.",
             "homepage": "https://www.drupal.org/project/rocket_chat",
             "support": {
-                "source": "http://cgit.drupalcode.org/rocket_chat"
+                "source": "https://git.drupalcode.org/project/rocket_chat"
             }
         },
         {
@@ -2325,7 +2322,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.0-alpha7",
-                    "datestamp": "1526809984",
+                    "datestamp": "1540711680",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2390,7 +2387,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha4",
-                    "datestamp": "1524826980",
+                    "datestamp": "1540379280",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3220,16 +3217,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.17",
+            "version": "v2.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d"
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/29af24f25bab834fcbb38ad2a69fa93b867e070d",
-                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
                 "shasum": ""
             },
             "require": {
@@ -3265,7 +3262,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-07-04T16:31:37+00:00"
+            "time": "2019-01-03T20:59:08+00:00"
         },
         {
             "name": "psr/container",
@@ -4230,16 +4227,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.15",
+            "version": "v3.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "2fb33cb6eefe6e790e4023f7c534a9e4214252fc"
+                "reference": "d2d0cfe8e319d9df44c4cca570710fcf221d4593"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/2fb33cb6eefe6e790e4023f7c534a9e4214252fc",
-                "reference": "2fb33cb6eefe6e790e4023f7c534a9e4214252fc",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d2d0cfe8e319d9df44c4cca570710fcf221d4593",
+                "reference": "d2d0cfe8e319d9df44c4cca570710fcf221d4593",
                 "shasum": ""
             },
             "require": {
@@ -4280,7 +4277,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-27T17:45:33+00:00"
+            "time": "2019-11-28T12:52:59+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -4490,16 +4487,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.9.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8"
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d0cd638f4634c16d8df4508e847f14e9e43168b8",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
                 "shasum": ""
             },
             "require": {
@@ -4511,7 +4508,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -4545,20 +4542,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2019-11-27T14:18:11+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.9.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "1e24b0c4a56d55aaf368763a06c6d1c7d3194934"
+                "reference": "af23c7bb26a73b850840823662dda371484926c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/1e24b0c4a56d55aaf368763a06c6d1c7d3194934",
-                "reference": "1e24b0c4a56d55aaf368763a06c6d1c7d3194934",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/af23c7bb26a73b850840823662dda371484926c4",
+                "reference": "af23c7bb26a73b850840823662dda371484926c4",
                 "shasum": ""
             },
             "require": {
@@ -4568,7 +4565,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -4604,7 +4601,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2019-11-27T13:56:44+00:00"
         },
         {
             "name": "symfony/process",
@@ -5625,12 +5622,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/Mink.git",
-                "reference": "d5ee350c40baff5f331a05ebdbe1927345c9ac8b"
+                "reference": "a534fe7dac9525e8e10ca68e737c3d7e5058ec83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/d5ee350c40baff5f331a05ebdbe1927345c9ac8b",
-                "reference": "d5ee350c40baff5f331a05ebdbe1927345c9ac8b",
+                "url": "https://api.github.com/repos/minkphp/Mink/zipball/a534fe7dac9525e8e10ca68e737c3d7e5058ec83",
+                "reference": "a534fe7dac9525e8e10ca68e737c3d7e5058ec83",
                 "shasum": ""
             },
             "require": {
@@ -5638,7 +5635,7 @@
                 "symfony/css-selector": "^2.7|^3.0|^4.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^3.3|^4.0"
+                "symfony/phpunit-bridge": "^4.2"
             },
             "suggest": {
                 "behat/mink-browserkit-driver": "extremely fast headless driver for Symfony\\Kernel-based apps (Sf2, Silex)",
@@ -5676,7 +5673,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2018-06-24T20:08:51+00:00"
+            "time": "2019-07-15T12:45:29+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -5791,22 +5788,22 @@
         },
         {
             "name": "behat/mink-selenium2-driver",
-            "version": "dev-master",
+            "version": "1.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "f4efaf52fed6a98bf6037a04f3fdef94dc0c8841"
+                "reference": "0a09c4341621fca937a726827611b20ce3e2c259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/f4efaf52fed6a98bf6037a04f3fdef94dc0c8841",
-                "reference": "f4efaf52fed6a98bf6037a04f3fdef94dc0c8841",
+                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/0a09c4341621fca937a726827611b20ce3e2c259",
+                "reference": "0a09c4341621fca937a726827611b20ce3e2c259",
                 "shasum": ""
             },
             "require": {
                 "behat/mink": "~1.7@dev",
                 "instaclick/php-webdriver": "~1.1",
-                "php": ">=5.3.1"
+                "php": ">=5.4"
             },
             "require-dev": {
                 "mink/driver-testsuite": "dev-master"
@@ -5828,14 +5825,14 @@
             ],
             "authors": [
                 {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                },
-                {
                     "name": "Pete Otaqui",
                     "email": "pete@otaqui.com",
                     "homepage": "https://github.com/pete-otaqui"
+                },
+                {
+                    "name": "Konstantin Kudryashov",
+                    "email": "ever.zet@gmail.com",
+                    "homepage": "http://everzet.com"
                 }
             ],
             "description": "Selenium2 (WebDriver) driver for Mink framework",
@@ -5848,7 +5845,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2018-07-23T10:51:47+00:00"
+            "time": "2019-09-02T09:46:54+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -6165,7 +6162,7 @@
             "time": "2016-12-01T10:57:30+00:00"
         },
         {
-            "name": "mikey179/vfsStream",
+            "name": "mikey179/vfsstream",
             "version": "v1.6.5",
             "source": {
                 "type": "git",
