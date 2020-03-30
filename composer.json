@@ -114,6 +114,7 @@
 
     ],
     "require": {
+        "ext-gd": "*",
         "antennaio/jquery-bar-rating": "^1.2",
         "billboardjs/billboard": "1.6.2",
         "c3js/c3": "0.4.18",
@@ -127,6 +128,7 @@
         "drupal/charts": "3.x-dev",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
+        "drupal/graphql": "^3.0",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/rocket_chat": "^1.1",
         "drupal/votingapi_widgets": "^1.0@alpha",
