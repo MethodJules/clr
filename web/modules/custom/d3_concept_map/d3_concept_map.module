@@ -41,9 +41,53 @@ function d3_concept_map_entity_view_alter(array &$build, Drupal\Core\Entity\Enti
  */
 function d3_concept_map_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
 
-    //$nid = $build["#node"]->values["nid"]["x-default"];
-    //$conceptMapService = \Drupal::service('d3_concept_map.default');
-    //$conceptMapService->getData(13);
+
+    if($entity->bundle() == 'concept_map') {
+      $nid = $entity->id();
+      $conceptMapService = \Drupal::service('d3_concept_map.default');
+      //$graphData = $conceptMapService->getData($nid);
+    }
+
+    //dsm($graphData);
+
+
+    $graphData = [
+      'nodes' => [
+        [
+          'name' => 'Concept Maps',
+          'label' => '',
+          'id' => 1
+        ],
+        [
+          'name' => 'Mental structure of long term memory',
+          'label' => '',
+          'id' => 2
+        ],
+        [
+          'name' => 'Relatedness structure',
+          'label' => '',
+          'id' => 3
+        ],
+
+      ],
+      'links' => [
+        [
+          'source' => 1,
+          'target' => 2,
+          'type' => 'probe',
+        ],
+        [
+          'source' => 2,
+          'target' => 3,
+          'type' => 'which assumed to have',
+        ],
+
+      ],
+    ];
+
+    //dsm(json_encode($graphData));
+
+
 
 
     $graphData = '{
@@ -166,14 +210,17 @@ function d3_concept_map_entity_view(array &$build, \Drupal\Core\Entity\EntityInt
       "target": 8,
       "type": "especially"
     }
-    
+
   ]
 }';
+
 
     //Add a JS library
     $build['#attached']['library'][] = 'd3_concept_map/d3';
     $build['#attached']['library'][] = 'd3_concept_map/d3sm';
+    //$build['#attached']['drupalSettings']['d3_concept_map']['data'] = json_encode($graphData);
     $build['#attached']['drupalSettings']['d3_concept_map']['data'] = $graphData;
+
     $build['#attached']['library'][] = 'd3_concept_map/concept-map-js';
 
 

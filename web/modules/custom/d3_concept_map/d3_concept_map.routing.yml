@@ -1,0 +1,7 @@
+d3_concept_map.content:
+    path: '/concept_map/content'
+    defaults:
+        _title: 'Concept Map'
+        _controller: 'Drupal\d3_concept_map\Controller\ConceptMapController::content'
+    requirements:
+        _permission: 'access content'

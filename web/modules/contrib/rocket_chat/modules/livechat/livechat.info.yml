@@ -1,0 +1,15 @@
+name: Rocket Chat Livechat Block
+type: module
+description: Livechat block.
+package: Rocket.Chat
+# core: 8.x
+dependencies:
+  - drupal:block
+  - drupal:node
+  - drupal:rocket_chat
+
+# Information added by Drupal.org packaging script on 2017-08-29
+version: '8.x-1.1'
+core: '8.x'
+project: 'rocket_chat'
+datestamp: 1504008847

@@ -30,17 +30,38 @@ class ConceptMapService {
     $node_storage = \Drupal::entityTypeManager()->getStorage('node');
     $node = $node_storage->load($nodeId);
 
-    $concepts = $node->field_concepts->referencedEntities();
+    foreach($node->field_concepts as $concept) {
+      //Get concept
+      $concept_title = $concept->entity->title->value;
+      $referenced_concept_id = $concept->target_id;
+      //Get relation
+      $relation = $this->getRelation($referenced_concept_id);
 
-
-    foreach ($concepts as $concept){
-      $asd = 0;
-
+      $referenced_nodes[] = [
+        'name' => $concept_title,
+        'id' => $referenced_concept_id,
+        'relation' => $relation,
+      ];
     }
+
+    return $referenced_nodes;
   }
 
-  private function getConcepts(Integer $nodeId) {
 
+  public function getRelation($nid) {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    $node = $node_storage->load($nid);
+    foreach($node->field_relation as $relation) {
+      $relation_title = $relation->title->value;
+      $relation_target_id = $relation->target_id;
+    }
+    return ['relation_title' => $relation_title, 'relation_target_id' => $relation_target_id];
+  }
+
+  private function getConcepts($nodeId) {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    $node = $node_storage->load($nodeId);
+    return $node->get('title')->value;
 
   }
 
